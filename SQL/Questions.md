@@ -1,5 +1,7 @@
-1)Select the Employee with the top three salaries				
-2)Select the Employee with the least salary				
+# ProblemSet01 - Questions
+
+1)Select the Employee with the top three salaries
+2)Select the Employee with the least salary			 	
 3)Select the Employee who does not have a manager in the department table		
 4)Select the Employee who is also a Manager				
 5)Select the Empolyee who is a Manager and has least salary				
