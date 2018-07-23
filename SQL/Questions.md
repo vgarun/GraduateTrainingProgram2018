@@ -18,5 +18,3 @@
 18)Select the total number of Employees in Dept id D04				
 19)Select all department details of the Department with Maximum Employees	
 20)Select the Employees who has Tim Cook as their manager
-		
-
