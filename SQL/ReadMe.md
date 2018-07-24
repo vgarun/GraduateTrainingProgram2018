@@ -11,12 +11,12 @@
 1. You are to translate the english into a SQL query that computes the desired result over all possible databases. 
 1. Your queries are expected to be run intially using SQLite, so you must conform to the SQL constructs supported by SQLite.
 1. Unless a specific result ordering is asked for, you can return the result rows in any order.
-1. Upload your sql solutions as Solutions.sql (One per problemset) file in the format specified under [Samples](https://github.com/krishnakumarraghu/New-Onboards-Training/tree/master/Samples). 
+1. Upload your sql solutions as Solutions.sql (One per problemset) file in the format specified in [Solutions](https://github.com/vgarun/GraduateTrainingProgram2018/blob/master/SQL/Solutions.sql). 
 1. This needs to be uploaded into your respective Git folders.
 1. You can use SQLFiddle for building your schema and test execution. But you will need to submit your results using a SQLite instance you will create using the steps mentioned in
-[SQLite Install](https://github.com/krishnakumarraghu/New-Onboards-Training/blob/master/SQL/SQLliteInsstallation.md)
+[SQLite Install](https://github.com/vgarun/GraduateTrainingProgram2018/blob/master/SQL/SQLliteInsstallation.md)
 1. You can create one small sqllite DB and complete all of the problesets by setting up the necessary tables. You will need to upload the sqllite db as well to your respective Solutions folders.
-1. Once you complete all of the problemsets , you will need to complete the final [Grading Set](https://github.com/krishnakumarraghu/New-Onboards-Training/blob/master/SQL/GradingSet/README.md) to mark your SQL Assessment as Complete.
+1. Once you complete all of the problemsets , you will need to complete the final [Grading Set](https://github.com/vgarun/GraduateTrainingProgram2018/blob/master/SQL/GradingSet/README.md) to mark your SQL Assessment as Complete.
 
 
 # Textbook Readings and Other Materials
