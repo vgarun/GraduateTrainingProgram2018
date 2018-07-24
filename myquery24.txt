@@ -1,0 +1,135 @@
+1) select name,salary from Employee order by salary desc LIMIT 3 ;
++---------------+--------+
+| name          | salary |
++---------------+--------+
+| Tara Cummings |  99475 |
+| Paul vincet   |  94791 |
+| Adam Wayne    |  94324 |
++---------------+--------+
+
+
+2)  select name,salary from Employee order by salary  LIMIT 1 ;
++-------------+--------+
+| name        | salary |
++-------------+--------+
+| John Hellen |  15380 |
++-------------+--------+
+
+
+4) select a.name,a.E_ID ,a.Manager_ID,b.name from Employee a,Employee b where a.Manager_ID=b.E_ID;
++-----------------+------+------------+-----------------+
+| name            | E_ID | Manager_ID | name            |
++-----------------+------+------------+-----------------+
+| John Hellen     | A111 | A120       | Tim Archer      |
+| Robin Wayne     | A116 | A187       | Adam Justin     |
+| Stuart Willam   | A121 | A187       | Adam Justin     |
+| Adam Wayne      | A128 | A165       | Natasha Stevens |
+| Joseph Angelin  | A129 | A165       | Natasha Stevens |
+| Vanessa Parry   | A130 | A187       | Adam Justin     |
+| Paul vincet     | A132 | A120       | Tim Archer      |
+| Steve Michelos  | A133 | A187       | Adam Justin     |
+| Tara Cummings   | A142 | A187       | Adam Justin     |
+| Braud Micheal   | A143 | A120       | Tim Archer      |
+| Nick Martin     | A156 | A178       | Bruce Wills     |
+| Edward Cane     | A176 | A120       | Tim Archer      |
+| Harolld Stevens | A194 | A187       | Adam Justin     |
+| Tom Hanks       | A198 | A187       | Adam Justin     |
++-----------------+------+------------+-----------------+
+
+
+
+5) select name, min(salary) from (select a.name,a.salary from Employee a,Employee b where a.Manager_ID=b.E_ID)as t;
++-------------+-------------+
+| name        | min(salary) |
++-------------+-------------+
+| John Hellen |       15380 |
++-------------+-------------+
+
+
+6)select count(E_ID) from Employee where Dept_id=(select Dept_id from Departments where Dept_name='Communications');
++-------------+
+| count(E_ID) |
++-------------+
+|           6 |
++-------------+
+
+7)select name,max(salary) from Employee where Dept_id=(select Dept_id from Departments where Dept_name='Finance');
++------------+-------------+
+| name       | max(salary) |
++------------+-------------+
+| Adam Wayne |       94324 |
++------------+-------------+
+
+8) select name,min(salary) from Employee where Dept_id=(select Dept_id from Departments where Dept_name='product');
++-------------+-------------+
+| name        | min(salary) |
++-------------+-------------+
+| Nick Martin |       50174 |
++-------------+-------------+
+
+9) select name,max(salary) from Employee where Dept_id=(select Dept_id from Departments where Dept_name='Health');
++-------------+-------------+
+| name        | max(salary) |
++-------------+-------------+
+| John Hellen |       94791 |
++-------------+-------------+
+
+10)
+ select name from Employee where Dept_id=(select Dept_id from Departments where Dep_Manager='Natasha Stevens');
++-----------------+
+| name            |
++-----------------+
+| Adam Wayne      |
+| Joseph Angelin  |
+| Natasha Stevens |
++-----------------+
+
+
+
+
+11)
+select t.name,d.Dept_name,d.Dep_Manager from departments d inner join(select name from employee where Dept_id= (select Dept_id from Departments where Dept_name='Health'))as t where Dept_name='Health';
++---------------+-----------+-------------+
+| name          | Dept_name | Dep_Manager |
++---------------+-----------+-------------+
+| John Hellen   | Health    | Tim Archer  |
+| Tim Archer    | Health    | Tim Archer  |
+| Paul vincet   | Health    | Tim Archer  |
+| Braud Micheal | Health    | Tim Archer  |
+| Edward Cane   | Health    | Tim Archer  |
++---------------+-----------+-------------+
+
+
+
+0r) select t.count,t.name,d.Dept_name,d.Dep_Manager from departments d inner join(select name,count(name) as count from employee where Dept_id= (select Dept_id from Departments where Dept_name='Health'))as t where Dept_name='Health';
++-------+-------------+-----------+-------------+
+| count | name        | Dept_name | Dep_Manager |
++-------+-------------+-----------+-------------+
+|     5 | John Hellen | Health    | Tim Archer  |
++-------+-------------+-----------+-------------+
+
+12)
+ select E_ID,Dept_id,Manager_ID from employee where Dept_id=(select Dept_id from Departments where Dept_name='Communications');
++------+---------+------------+
+| E_ID | Dept_id | Manager_ID |
++------+---------+------------+
+| A116 | D02     | A187       |
+| A121 | D02     | A187       |
+| A133 | D02     | A187       |
+| A187 | D02     | A298       |
+| A194 | D02     | A187       |
+| A198 | D02     | A187       |
++------+---------+------------+
+
+
+13) select d.Dept_name,t.Dept_id,t.average from departments d inner join (select Dept_id,avg(salary) as average from employee group by Dept_id) as t where d.Dept_id=t.Dept_id;
++----------------+---------+------------+
+| Dept_name      | Dept_id | average    |
++----------------+---------+------------+
+| Health         | D01     | 54533.8000 |
+| Communications | D02     | 48271.3333 |
+| product        | D03     | 58517.5000 |
+| Insurance      | D04     | 64020.0000 |
+| Finance        | D05     | 56660.3333 |
++----------------+---------+------------+
+
