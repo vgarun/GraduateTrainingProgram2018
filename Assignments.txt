@@ -1,0 +1,77 @@
+1)Select the Employee with the top three salaries
+
+ select * from employee order by salary desc limit 3;
+
+A142|Tara Cummings|D04|99475|A187
+A132|PAUL VINCET|D01|94791|A120
+A128|Adam Wayne|D05|94324|A165
+
+
+2)Select the Employee with the least salary
+
+select * from employee order by salary limit 1;
+A111|John Helen|D01|15380|A120
+
+
+select * from employee where salary =(select min(salary) from employee);
+A111|John Helen|D01|15380|A120
+
+3)Select the Employee who does not have a manager in the department table
+
+sqlite> select * from employee where manager_Id not in(select emp_id from Employee e Inner Join Dept d where e.dept_id=d.dept_id and e.name=d.Dept_manager);
+A178|BRUCE WILLS|D03|66861|A298
+A120|Tim Archer|D01|48834|A298
+A187|Adam Justin|D02|80543|A298
+A165|Natasha Stevens|D05|31377|A298
+
+4) )Select the Employee who is also a Manager
+
+select distinct e.emp_id,e.name from employee e,employee e1 where e.emp_id=e1.manager_id;
+A120|Tim Archer
+A187|Adam Justin
+A165|Natasha Stevens
+A178|BRUCE WILLS
+
+5)Select the Empolyee who is a Manager and has least salary
+
+ select * from employee where salary =(select min(e.salary) from employee e,employee e1 where e.emp_id=e1.manager_id);
+
+A165|Natasha Stevens|D05|31377|A298
+
+6)Select the total number of Employees in Communications departments
+ 
+select count(*) from employee where dept_id =(select dept_id from dept where Dept_name='COmmunications');
+
+6
+
+7)Select the Employee in Finance Department who has the top salary
+
+ select emp_id,name,max(salary) from employee where dept_id =(select dept_id from dept where Dept_name='Finance');
+
+A128|Adam Wayne|94324
+
+8)Select the Employee in product depatment who has the least salary
+
+select emp_id,name,min(salary) from employee where dept_id =(select dept_id from dept where Dept_name='Product');
+
+A156|Nick Martin|50174
+
+9)Select the count of Empolyees in Health with maximum salary
+
+select count(*) from employee where salary=(select max(salary) from employee where dept_id =(select dept_id from dept where Dept_name='Health'));
+
+1
+
+10)Select the Employees who report to Natasha Stevens
+
+select * from employee where manager_Id in(select distinct e.emp_id from employee e,employee e1 where e.emp_id=e1.manager_id and e.name='Natasha Stevens');
+
+A128|Adam Wayne|D05|94324|A165
+A129|Joseph Angeline|D05|44280|A165
+
+
+11) Display the Employee name,Employee count,Dep name,Dept manager in the Health department
+
+
+
+
