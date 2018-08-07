@@ -1,0 +1,17 @@
+1. What are the various phases of the Waterfall model in SDLC ?
+2. When does a sprint planning meeting take place and what is the output of a sprint planning meeting?
+3. What is a scrum ? What are the different roles in an Agile scrum team?
+4. List some of the responsibilities of the Product owner in Agile.
+5. What is a Sprint ? What should be the outcome of a sprint?
+6. Which among the following fall under the responsiblities of the Scrum master
+
+a. Facilitating Agile ceremonies like Daily standup, sprint planning , retrospective and demos.
+b. Representing the customer and engaging with them to ensure that the team is building the right product
+c. Resolve conflicts, blockers or impediments that the team may have during the sprint which are affecting deliverables
+d. Responsible for converting requirements into a potentially shippable product increment.
+
+7. Define Software deployment.
+8. What is the use of a Sprint Retrospective meeting?
+9. What is an Agile release train?
+10. What is meant by a source version control tool?  What are some of the widely used Version control tools?
+
