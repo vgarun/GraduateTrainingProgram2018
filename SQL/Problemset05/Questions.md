@@ -1,0 +1,17 @@
+# ProblemSet05 - Questions
+
+1. Give the organiser's name of the concert in the Assembly Rooms after the first of Feb, 1997. (1 point possible)
+1. Find all the performers who played guitar or violin and were born in England. (1 point possible)
+1. List the names of musicians who have conducted concerts in USA together with the towns and dates of these concerts. (1 point possible)
+1. How many concerts have featured at least one composition by Andy Jones? List concert date, venue and the composition's title. (1 point possible)
+1. List the different instruments played by the musicians and avg number of musicians who play the instrument. (1 point possible)
+1. List the names, dates of birth and the instrument played of living musicians who play a instrument which Theo also plays. (1 point possible)
+1. List the name and the number of players for the band whose number of players is greater than the average number of players in each band. (1 point possible)
+1. List the names of musicians who both conduct and compose and live in Britain. (1 point possible)
+1. Show the least commonly played instrument and the number of musicians who play it. (1 point possible)
+1. List the bands that have played music composed by Sue Little; Give the titles of the composition in each case. (1 point possible)
+1. List the name and town of birth of any performer born in the same city as James First.(1 point possible)
+1. Create a list showing for EVERY musician born in Britain the number of compositions and the number of instruments played. (1 point possible)
+1. Give the band name, conductor and contact of the bands performing at the most recent concert in the Royal Albert Hall. (1 point possible)
+1. Give a list of musicians associated with Glasgow. Include the name of the musician and the nature of the association - one or more of 'LIVES_IN', 'BORN_IN', 'PERFORMED_IN' AND 'IN_BAND_IN'. (1 point possible)
+1. Jeff Dawn plays in a band with someone who plays in a band with Sue Little. Who is it and what are the bands? (1 point possible)
